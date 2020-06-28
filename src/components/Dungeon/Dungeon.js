@@ -40,6 +40,8 @@ class Dungeon extends React.Component {
     render() {
        return <div className="dungeon">
                 <span role="img" aria-label="skull">&#x1F480;</span>
+                <p>Refresh for a new dungeon</p>
+                <hr/>
                 {this.state.sections.map(section => (
                     <div>
                         <em>{section.description}</em>
