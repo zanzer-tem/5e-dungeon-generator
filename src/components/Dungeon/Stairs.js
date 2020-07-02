@@ -1,4 +1,4 @@
-import {roll} from './Dice';
+import {roll} from '../Helper/Dice';
 
 
 export const STAIRS = 5;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Dungeon from '../Dungeon/Dungeon';
+import Dungeon from '../DungeonV2/Dungeon';
 function App() {
   return (
     <div className="App">

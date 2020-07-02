@@ -1,4 +1,4 @@
-import {roll} from './Dice';
+import {roll} from '../Helper/Dice';
 import {Door} from './Door';
 import {Passage} from './Passage';
 import {Stairs} from './Stairs';

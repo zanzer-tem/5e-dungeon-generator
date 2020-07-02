@@ -1,5 +1,5 @@
 import {Door} from './Door';
-import {roll} from './Dice';
+import {roll} from '../Helper/Dice';
 import {Stairs} from './Stairs';
 import {Chamber} from './Chamber';
 export const PASSAGE = 2;
