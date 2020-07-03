@@ -1,18 +1,16 @@
 .section {
-    grid-column-start: 2;
-    grid-column-end: 3;
+   
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 240px  240px  240px 240px;
-    grid-template-areas: "section-header section-header  section-header section-header"
+    
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-areas: "section-header section-header section-header section-header"
                          "section-usage section-description section-description section-description";
-
+                      
   }
   
   .section-header{
     grid-area: section-header;
     text-align: center;
-
   }
   
   .section-usage{

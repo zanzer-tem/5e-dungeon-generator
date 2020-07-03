@@ -45,10 +45,9 @@ class Dungeon extends React.Component {
 
     render() {
        return <div className="dungeon">
-               
-                {this.state.sections.map((section, sectionIndex) => (
-                    <Section section={section} sectionIndex={sectionIndex} currentSection={section === this.state.sections[this.state.sections.length -1]} handleClick={this.handleClick} clickBack={this.clickBack}/>
-                ))}
+                    {this.state.sections.map((section, sectionIndex) => (
+                        <Section section={section} sectionIndex={sectionIndex} currentSection={section === this.state.sections[this.state.sections.length -1]} handleClick={this.handleClick} clickBack={this.clickBack}/>
+                    ))}
              </div>
     }
 }
