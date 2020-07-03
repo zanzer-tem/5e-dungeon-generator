@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/5e-dungeon-generator/static/css/main.b4ec13e0.chunk.css",
-    "main.js": "/5e-dungeon-generator/static/js/main.617ec20d.chunk.js",
-    "main.js.map": "/5e-dungeon-generator/static/js/main.617ec20d.chunk.js.map",
+    "main.css": "/5e-dungeon-generator/static/css/main.96d81ad6.chunk.css",
+    "main.js": "/5e-dungeon-generator/static/js/main.1d0c4400.chunk.js",
+    "main.js.map": "/5e-dungeon-generator/static/js/main.1d0c4400.chunk.js.map",
     "runtime-main.js": "/5e-dungeon-generator/static/js/runtime-main.27df41a2.js",
     "runtime-main.js.map": "/5e-dungeon-generator/static/js/runtime-main.27df41a2.js.map",
     "static/js/2.cb12af97.chunk.js": "/5e-dungeon-generator/static/js/2.cb12af97.chunk.js",
     "static/js/2.cb12af97.chunk.js.map": "/5e-dungeon-generator/static/js/2.cb12af97.chunk.js.map",
     "index.html": "/5e-dungeon-generator/index.html",
-    "precache-manifest.3e4ceeb649a9f8de5a7180dc01679447.js": "/5e-dungeon-generator/precache-manifest.3e4ceeb649a9f8de5a7180dc01679447.js",
+    "precache-manifest.dd81e49e593099ca848f39b39440ba1d.js": "/5e-dungeon-generator/precache-manifest.dd81e49e593099ca848f39b39440ba1d.js",
     "service-worker.js": "/5e-dungeon-generator/service-worker.js",
-    "static/css/main.b4ec13e0.chunk.css.map": "/5e-dungeon-generator/static/css/main.b4ec13e0.chunk.css.map",
+    "static/css/main.96d81ad6.chunk.css.map": "/5e-dungeon-generator/static/css/main.96d81ad6.chunk.css.map",
     "static/js/2.cb12af97.chunk.js.LICENSE.txt": "/5e-dungeon-generator/static/js/2.cb12af97.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.27df41a2.js",
     "static/js/2.cb12af97.chunk.js",
-    "static/css/main.b4ec13e0.chunk.css",
-    "static/js/main.617ec20d.chunk.js"
+    "static/css/main.96d81ad6.chunk.css",
+    "static/js/main.1d0c4400.chunk.js"
   ]
 }
