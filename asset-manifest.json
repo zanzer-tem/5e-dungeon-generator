@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/5e-dungeon-generator/static/css/main.1dd926e9.chunk.css",
+    "main.css": "/5e-dungeon-generator/static/css/main.601bc64c.chunk.css",
     "main.js": "/5e-dungeon-generator/static/js/main.9cc6e0a0.chunk.js",
     "main.js.map": "/5e-dungeon-generator/static/js/main.9cc6e0a0.chunk.js.map",
     "runtime-main.js": "/5e-dungeon-generator/static/js/runtime-main.27df41a2.js",
@@ -8,15 +8,15 @@
     "static/js/2.cb12af97.chunk.js": "/5e-dungeon-generator/static/js/2.cb12af97.chunk.js",
     "static/js/2.cb12af97.chunk.js.map": "/5e-dungeon-generator/static/js/2.cb12af97.chunk.js.map",
     "index.html": "/5e-dungeon-generator/index.html",
-    "precache-manifest.782358c7d1c28fdf353aa39606689a76.js": "/5e-dungeon-generator/precache-manifest.782358c7d1c28fdf353aa39606689a76.js",
+    "precache-manifest.0ad2a845521c415773d639dcd48d68e5.js": "/5e-dungeon-generator/precache-manifest.0ad2a845521c415773d639dcd48d68e5.js",
     "service-worker.js": "/5e-dungeon-generator/service-worker.js",
-    "static/css/main.1dd926e9.chunk.css.map": "/5e-dungeon-generator/static/css/main.1dd926e9.chunk.css.map",
+    "static/css/main.601bc64c.chunk.css.map": "/5e-dungeon-generator/static/css/main.601bc64c.chunk.css.map",
     "static/js/2.cb12af97.chunk.js.LICENSE.txt": "/5e-dungeon-generator/static/js/2.cb12af97.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.27df41a2.js",
     "static/js/2.cb12af97.chunk.js",
-    "static/css/main.1dd926e9.chunk.css",
+    "static/css/main.601bc64c.chunk.css",
     "static/js/main.9cc6e0a0.chunk.js"
   ]
 }
