@@ -6,33 +6,3 @@
 
 }
 
-.section {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  
-}
-
-.section-header{
-  width:800px;
-  text-align: center;
-}
-
-.section-description{
-  width:800px;
-}
-
-
-
-
-button {
-    background: none!important;
-    border: none;
-    padding: 0!important;
-    /*optional*/
-    font-family: Merriweather, Roboto;
-    font-size: 12pt;
-    /*input has OS specific font-family*/
-    color: #069;
-    text-decoration: underline;
-    cursor: pointer;
-}

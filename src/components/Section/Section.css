@@ -1,0 +1,46 @@
+.section {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 240px  240px  240px 240px;
+    grid-template-areas: "section-header section-header  section-header section-header"
+                         "section-usage section-description section-description section-description";
+
+  }
+  
+  .section-header{
+    grid-area: section-header;
+    text-align: center;
+
+  }
+  
+  .section-usage{
+    grid-area: section-usage;
+    font-weight: bold;
+    background-color: #fdfdfd;
+    /*display: grid;
+    grid-auto-flow: column;
+    gap: 4px;
+    align-items: center;
+    justify-items: center;*/
+  }
+  .section-description{
+    grid-area: section-description;
+  }
+  
+  
+  
+  
+  button {
+      background: none!important;
+      border: none;
+      padding: 0!important;
+      /*optional*/
+      font-family: Merriweather, Roboto;
+      font-size: 12pt;
+      /*input has OS specific font-family*/
+      color: #069;
+      text-decoration: underline;
+      cursor: pointer;
+  }

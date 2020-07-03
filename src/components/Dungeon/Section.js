@@ -23,43 +23,53 @@ export function StartingArea(){
     };
     switch(result) {
         case 1:
-            startingArea.description = "Entrance, Square, 20 x 20 ft; passage on each wall";
+            startingArea.usage = "Entrance";
+            startingArea.description = "Square, 20 x 20 ft; passage on each wall";
             startingArea.exits = [Archway(),Archway(),Archway()];
             break;
         case 2:
-            startingArea.description =  "Entrance, Square, 20 x 20 ft; door on two walls, passage on third wall";
+            startingArea.usage = "Entrance";
+            startingArea.description =  "Square, 20 x 20 ft; door on two walls, passage on third wall";
             startingArea.exits = [Door(),Door(),Archway()];
             break;
         case 3:
-            startingArea.description = "Entrance, Square, 40 x 40 ft; door on three walls";
+            startingArea.usage = "Entrance";
+            startingArea.description = "Square, 40 x 40 ft; door on three walls";
             startingArea.exits = [Door(),Door(),Door()];
             break;
         case 4:
-            startingArea.description = "Entrance, Rectangle, 80 x 20 ft; passage on each wall";
+            startingArea.usage = "Entrance";
+            startingArea.description = "Rectangle, 80 x 20 ft; passage on each wall";
             startingArea.exits = [Door(),Door(),Door()];
             break;
         case 5:
-            startingArea.description = "Entrance, Rectangle, 20 x 40 ft; passage on each wall";
+            startingArea.usage = "Entrance";
+            startingArea.description = "Rectangle, 20 x 40 ft; passage on each wall";
             startingArea.exits = [Archway(),Archway(),Archway()];
             break;
         case 6:
-            startingArea.description = "Entrance, Circle, 40 ft diameter; one passage at each cardinal direction";
+            startingArea.usage = "Entrance";
+            startingArea.description = "Circle, 40 ft diameter; one passage at each cardinal direction";
             startingArea.exits = [Archway(),Archway(),Archway()];
             break;
         case 7:
-            startingArea.description = "Entrance, Circle, 40 ft diameter; one passage at each cardinal direction; well in middle of room (might lead down to lower level)";
+            startingArea.usage = "Entrance";
+            startingArea.description = "Circle, 40 ft diameter; one passage at each cardinal direction; well in middle of room (might lead down to lower level)";
             startingArea.exits = [Archway(),Archway(),Archway(),Well()];
             break;
         case 8:
-            startingArea.description = "Entrance, Square 20 x 20 ft; door on two walls, passage on third wall, secret door on fourth wall";
+            startingArea.usage = "Entrance";
+            startingArea.description = "Square 20 x 20 ft; door on two walls, passage on third wall, secret door on fourth wall";
             startingArea.exits = [Door(),Door(),Archway(),Door()];
             break;   
         case 9:
-            startingArea.description =  "Entrance, Passage, 10 ft wide; T intersection";
+            startingArea.usage = "Entrance";
+            startingArea.description =  "Passage, 10 ft wide; T intersection";
             startingArea.exits = [Archway(),Archway()];
             break;
         default:
-            startingArea.description =  "Entrance, Passage, 10ft wide; four-way intersection";
+            startingArea.usage = "Entrance";
+            startingArea.description =  "Passage, 10ft wide; four-way intersection";
             startingArea.exits = [Archway(),Archway(),Archway(),Archway()];
             break;
     } 
@@ -92,41 +102,50 @@ export function Passage(){
     switch(result){
         case 1:
         case 2:
+            passage.usage = "Passage";
             passage.description = "Continue straight 30ft, no doors or side passages";
             break;
         case 3:
+            passage.usage = "Passage";
             passage.description =  "Continue straight 20ft./ door to the right, then an additional 10ft. ahead";
             passage.exits = [Door(), Archway()];
             break;
         case 4:
+            passage.usage = "Passage";
             passage.description =  "Continue straight 20ft./ door to the left, then an additional 10 ft. ahead";
             passage.exits = [Door(), Archway()];
             break;
         case 5: 
+            passage.usage = "Passage";
             passage.description =  "Continue straight 20ft; passage ends in a door";
             passage.exits = [Door()];
             break;
         case 6:
         case 7: 
+            passage.usage = "Passage";  
             passage.description =  "Continue straight 20ft; side passage to the right, then an additional 10 ft ahead";
             passage.exits = [Archway(), Archway()];
             break;
         case 8:
         case 9:
+            passage.usage = "Passage";
             passage.description =  "Continue straight 20ft; side passage to the left, then an additional 10 ft ahead";
             passage.exits = [Archway(), Archway()];
             break;
         case 10:
+            passage.usage = "Passage";
             passage.description =  "Continue straight 20ft; comes to a dead end; 10 % chance of a secret door";
             passage.exits = [Door()];
             break;
         case 11:
         case 12:
+            passage.usage = "Passage";
             passage.description =  "Continue straight 20ft; then the passage turns left and continues 10 ft";
             passage.exits = [Archway()];
             break;
         case 13:
         case 14:
+            passage.usage = "Passage";
             passage.description =  "Continue straight 20ft; then the passage turns right anc continues 10ft";
             passage.exits = [ Archway()];
             break;
@@ -135,10 +154,12 @@ export function Passage(){
         case 17:
         case 18:
         case 19:
+            passage.usage = "Chamber";
             passage.description =  "Chamber";
             passage.exits = [Archway(18)];
             break;
         default:
+            passage.usage = "Stairs";
             passage.description =  "Stairs";
             passage.exits = [Archway(19)];
             break;
@@ -158,58 +179,70 @@ export function Chamber(){
     switch(result) {
         case 1:
         case 2:
-            chamber.description = chamberPurpose() + ", Square, 20 x 20 ft";
+            chamber.usage = chamberPurpose();
+            chamber.description =  "Square, 20 x 20 ft";
             chamber.exits = normalChamberExits();
             break;
         case 3:
         case 4:
-            chamber.description = chamberPurpose() + ", Square, 30 x 30 ft";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Square, 30 x 30 ft";
             chamber.exits = normalChamberExits();
             break;
         case 5:
         case 6:
-            chamber.description = chamberPurpose() + ", Square, 40 x 40 ft";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Square, 40 x 40 ft";
             chamber.exits = normalChamberExits();
             break;
         case 7:
         case 8:
         case 9:
-            chamber.description = chamberPurpose() + ", Rectangle, 20 x 30 ft";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Rectangle, 20 x 30 ft";
             chamber.exits = normalChamberExits();
             break;
         case 10:
         case 11:
         case 12: 
-            chamber.description = chamberPurpose() + ", Rectangle, 30 x 40 ft";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Rectangle, 30 x 40 ft";
             chamber.exits = normalChamberExits();
             break;
         case 13:
         case 14:
-            chamber.description = chamberPurpose() + ", Rectangle, 40 x 50 ft";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Rectangle, 40 x 50 ft";
             chamber.exits = largeChamberExits();
             break;
         case 15:
-            chamber.description =chamberPurpose() + ", Rectangle, 50 x 80 ft";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Rectangle, 50 x 80 ft";
             chamber.exits = largeChamberExits();
             break;
         case 16:
-            chamber.description = chamberPurpose() + ", Circle, 30ft diameter";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Circle, 30ft diameter";
             chamber.exits = normalChamberExits();
             break;
         case 17:
-            chamber.description = chamberPurpose() + ", Circle, 50ft diameter";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Circle, 50ft diameter";
             chamber.exits = largeChamberExits();
             break;
         case 18:
-            chamber.description = chamberPurpose() + ", Octagon, 40 x 40ft diameter";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Octagon, 40 x 40ft diameter";
             chamber.exits = largeChamberExits();
             break;
         case 19:
-            chamber.description = chamberPurpose() + ", Octagon, 60 x 60ft diameter";
+            chamber.usage = chamberPurpose();
+            chamber.description = "Octagon, 60 x 60ft diameter";
             chamber.exits = largeChamberExits();
             break;
         default:
-            chamber.description =  chamberPurpose() + ", Trapezoid, roughly 40 x 60ft";
+            chamber.usage = chamberPurpose();
+            chamber.description =  "Trapezoid, roughly 40 x 60ft";
             chamber.exits = largeChamberExits();
             break;
     } 

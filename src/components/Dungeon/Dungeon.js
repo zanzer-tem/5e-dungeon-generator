@@ -1,5 +1,6 @@
 import React from 'react';
-import { StartingArea, STARTING_AREA } from './Section';
+import { StartingArea } from './Section';
+import Section from '../Section/Section';
 import './Dungeon.css';
 class Dungeon extends React.Component {
 
@@ -9,7 +10,7 @@ class Dungeon extends React.Component {
             sections: []
         };   
         this.handleClick = this.handleClick.bind(this);
-        this.back = this.back.bind(this);
+        this.clickBack = this.clickBack.bind(this);
     }
 
     componentDidMount() {
@@ -33,7 +34,7 @@ class Dungeon extends React.Component {
         
     }
 
-    back() {    
+    clickBack() {    
        
         var newSections = this.state.sections;
         newSections.pop();
@@ -46,41 +47,7 @@ class Dungeon extends React.Component {
        return <div className="dungeon">
                
                 {this.state.sections.map((section, sectionIndex) => (
-                    <div className="section">
-                        <div className="section-header">
-                            <p>
-                                ~{sectionIndex + 1}~
-                            </p>
-                        </div>
-                        <div className="section-description">
-                            <em>{ section.description }</em>
-
-                            <p>Exits:</p>
-                            <ul>
-                                {
-                                    section.type !== STARTING_AREA? 
-                                    <li key={sectionIndex+'back'}>{
-                                        section === this.state.sections[this.state.sections.length -1] ? 
-                                        <button onClick={this.back}>Back</button> :
-                                        <em>Back</em>
-                                    }</li> :
-                                    ''
-                                }
-                                {
-                                    section.exits.length > 0 ? section.exits.map((exit, index) => (
-                                            <li key={sectionIndex+'exit'+index}>{
-                                                exit.locked !== true &&  section === this.state.sections[this.state.sections.length -1] ?
-                                                <button value={index} onClick={this.handleClick}>{exit.description}</button> :
-                                                <em>{exit.description}</em>
-                                            }</li> 
-                                    )) : ''
-                                }
-                            </ul>
-                            
-                        </div>
-                        
-                    </div>
-                    
+                    <Section section={section} sectionIndex={sectionIndex} currentSection={section === this.state.sections[this.state.sections.length -1]} handleClick={this.handleClick} clickBack={this.clickBack}/>
                 ))}
              </div>
     }
