@@ -1,5 +1,5 @@
 import React from 'react';
-import { StartingArea, STARTING_AREA } from './StartingArea';
+import { StartingArea, STARTING_AREA } from './Section';
 import './Dungeon.css';
 class Dungeon extends React.Component {
 
@@ -21,9 +21,14 @@ class Dungeon extends React.Component {
     handleClick(event) {    
             var index = event.target.value;
             var newSections = this.state.sections;
-        
-            var newSection =  newSections[newSections.length -1].exits[index];
-            newSections.push(newSection);
+            var opening = newSections[newSections.length -1].exits[index];
+            if(opening.trapped === true) {
+                newSections[newSections.length -1].exits[index].locked = true;
+                newSections[newSections.length -1].exits[index].description = newSections[newSections.length -1].exits[index].description + "TRAPPED!";
+            } else {
+                var newSection =  newSections[newSections.length -1].exits[index].leadsTo;
+                newSections.push(newSection);
+            }
             this.setState(newSections);
         
     }
@@ -39,36 +44,43 @@ class Dungeon extends React.Component {
 
     render() {
        return <div className="dungeon">
-                <span role="img" aria-label="skull">&#x1F480;</span>
-                <p>Refresh for a new dungeon</p>
-                <hr/>
-                {this.state.sections.map(section => (
-                    <div>
-                        <em>{section.description}</em>
+               
+                {this.state.sections.map((section, sectionIndex) => (
+                    <div className="section">
+                        <div className="section-header">
+                            <p>
+                                ~{sectionIndex + 1}~
+                            </p>
+                        </div>
+                        <div className="section-description">
+                            <em>{ section.description }</em>
 
-                        <p>Exits:</p>
-                        <ul>
-                            {
-                                section.type !== STARTING_AREA? 
-                                <li>{
-                                    section === this.state.sections[this.state.sections.length -1] ? 
-                                    <button onClick={this.back}>Back</button> :
-                                    <em>Back</em>
-                                }</li> :
-                                ''
-                            }
-                            {
-                                section.exits.length > 0 ? section.exits.map((exit, index) => (
-                                        <li>{
-                                            exit.locked !== true && exit.exits.length > 0 && section === this.state.sections[this.state.sections.length -1] ?
-                                            <button value={index} onClick={this.handleClick}>{exit.description}</button> :
-                                            <em>{exit.description}</em>
-                                        }</li> 
-                                )) : ''
-                            }
-                        </ul>
-                        <hr/>
+                            <p>Exits:</p>
+                            <ul>
+                                {
+                                    section.type !== STARTING_AREA? 
+                                    <li key={sectionIndex+'back'}>{
+                                        section === this.state.sections[this.state.sections.length -1] ? 
+                                        <button onClick={this.back}>Back</button> :
+                                        <em>Back</em>
+                                    }</li> :
+                                    ''
+                                }
+                                {
+                                    section.exits.length > 0 ? section.exits.map((exit, index) => (
+                                            <li key={sectionIndex+'exit'+index}>{
+                                                exit.locked !== true &&  section === this.state.sections[this.state.sections.length -1] ?
+                                                <button value={index} onClick={this.handleClick}>{exit.description}</button> :
+                                                <em>{exit.description}</em>
+                                            }</li> 
+                                    )) : ''
+                                }
+                            </ul>
+                            
+                        </div>
+                        
                     </div>
+                    
                 ))}
              </div>
     }

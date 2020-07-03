@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import Dungeon from '../DungeonV2/Dungeon';
+import Dungeon from '../Dungeon/Dungeon';
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <header >
-        Zanzer's Dungeon
+        <div>Zanzer's Dungeon</div>
+        <div>
+            <span role="img" aria-label="skull">&#x1F480;</span>
+            <p>Refresh for a new dungeon</p>
+        </div>
       </header>
       <Dungeon />
     </div>
