@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2278da9b194b549e38e3303533387eb0",
+    "revision": "8bafe1c7d4902cb45ab6c1a6dc7bf2c7",
     "url": "/5e-dungeon-generator/index.html"
   },
   {
-    "revision": "406587c0806932fa0f05",
-    "url": "/5e-dungeon-generator/static/css/main.601bc64c.chunk.css"
+    "revision": "a199851b3ed16a3ec639",
+    "url": "/5e-dungeon-generator/static/css/main.4c6dacaf.chunk.css"
   },
   {
     "revision": "34cbe350415eff9e746d",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/5e-dungeon-generator/static/js/2.cb12af97.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "406587c0806932fa0f05",
+    "revision": "a199851b3ed16a3ec639",
     "url": "/5e-dungeon-generator/static/js/main.9cc6e0a0.chunk.js"
   },
   {

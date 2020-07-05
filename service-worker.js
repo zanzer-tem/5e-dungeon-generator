@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/5e-dungeon-generator/precache-manifest.ae812c03ab28da02a5c725a383a8a2b9.js"
+  "/5e-dungeon-generator/precache-manifest.a9d3d88c59a66b462c5010097e160443.js"
 );
 
 self.addEventListener('message', (event) => {
