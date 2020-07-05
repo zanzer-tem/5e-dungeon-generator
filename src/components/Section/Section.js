@@ -17,30 +17,29 @@ function Section(props) {
                             {section.usage}
                         </span>
                         <span className="section-description">
-                            <em>{ section.description }</em>
+                                <em>{ section.description }</em>
 
-                            <p>Exits:</p>
-                            <ul>
-                                {
-                                    section.type !== STARTING_AREA? 
-                                    <li key={sectionIndex+'back'}>{
-                                        currentSection ? 
-                                        <button onClick={props.clickBack}>Back</button> :
-                                        <em>Back</em>
-                                    }</li> :
-                                    ''
-                                }
-                                {
-                                    section.exits.length > 0 ? section.exits.map((exit, index) => (
-                                            <li key={sectionIndex+'exit'+index}>{
-                                                exit.locked !== true &&  currentSection ?
-                                                <button value={index} onClick={props.handleClick}>{exit.description}</button> :
-                                                <em>{exit.description}</em>
-                                            }</li> 
-                                    )) : ''
-                                }
-                            </ul>
-                            
+                                <p>Exits:</p>
+                                <ul>
+                                    {
+                                        section.type !== STARTING_AREA? 
+                                        <li key={sectionIndex+'back'}>{
+                                            currentSection ? 
+                                            <button onClick={props.clickBack}>Back</button> :
+                                            <em>Back</em>
+                                        }</li> :
+                                        ''
+                                    }
+                                    {
+                                        section.exits.length > 0 ? section.exits.map((exit, index) => (
+                                                <li key={sectionIndex+'exit'+index}>{
+                                                    exit.locked !== true &&  currentSection ?
+                                                    <button value={index} onClick={props.handleClick}>{exit.description}</button> :
+                                                    <em>{exit.description}</em>
+                                                }</li> 
+                                        )) : ''
+                                    }
+                                </ul>
                         </span>
                         
                     </div>

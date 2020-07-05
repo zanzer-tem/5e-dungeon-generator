@@ -2,10 +2,15 @@
    
     display: grid;
     
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    grid-template-areas: "section-header section-header section-header section-header"
-                         "section-usage section-description section-description section-description";
-                      
+    grid-template-columns: repeat(auto-fit, 240px);
+    grid-template-rows: auto;
+    grid-template-areas: "section-header section-header section-header"
+                         "section-usage section-description .";
+                         
+    grid-gap: .5rem;
+
+    
+        
   }
   
   .section-header{
@@ -17,14 +22,10 @@
     grid-area: section-usage;
     font-weight: bold;
     background-color: #fdfdfd;
-    /*display: grid;
-    grid-auto-flow: column;
-    gap: 4px;
-    align-items: center;
-    justify-items: center;*/
   }
   .section-description{
     grid-area: section-description;
+    justify-self: start;
   }
   
   
